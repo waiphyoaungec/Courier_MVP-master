@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "550524224081",
+    "firebase_url": "https://courier-mvp-master.firebaseio.com",
+    "project_id": "courier-mvp-master",
+    "storage_bucket": "courier-mvp-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550524224081:android:3f9655a6bbeed50c616e70",
+        "android_client_info": {
+          "package_name": "com.sh.courier_mvp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550524224081-4edhrqnu79rpphd5g11un7fn5mv91msm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChtjhgqRioQrdzjCBkth4nS0pLgHrXwqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550524224081-4edhrqnu79rpphd5g11un7fn5mv91msm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

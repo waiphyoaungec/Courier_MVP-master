@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">MGL_Courier</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">MGL</string>
+    <string name="nav_header_subtitle">Express Courier:V-1.1</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="home">Home</string>
+    <string name="pickuplist">PickUp List</string>
+    <string name="deliverysheet">Delivery Sheet</string>
+    <string name="deliverycheckpoint">Delivery Check Point</string>
+    <string name="addcheckpoint">Add Check Point</string>
+    <string name="logout">Logout</string>
+    <string name="code">Code</string>
+    <string name="doc_type">Doc Type</string>
+    <string name="payment_type">Payment Type</string>
+    <string name="customer_type">Customer Type</string>
+    <string name="remark">Remark</string>
+    <string name="realtime">Real time</string>
+    <string name="realdate">Real Date</string>
+    <string name="shippercode">Shipper Code</string>
+    <string name="consigneename">Consignee Name</string>
+    <string name="shippername">Shipper Name</string>
+    <string name="companyname">Company Name</string>
+    <string name="contactname">Contact Name</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="routeassign">Route Assign</string>
+    <string name="routeassigntime">Route Assign Time</string>
+    <string name="source">Source</string>
+    <string name="remotesource">Remote Source</string>
+    <string name="destination">Destination</string>
+    <string name="remotedestination">Remote Destination</string>
+    <string name="addwaybill">Add Way Bill</string>
+    <string name="currency">Currency</string>
+    <string name="delivery">Delivery</string>
+    <string name="createwaybill">Create New Waybill</string>
+
+    <string name="PREFS_FILE">com.mgl.courier</string>
+    <string name="welcome">Welcome To MGL (Courier App)</string>
+    <string name="prompt_email">Phone</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in">Login</string>
+    <string name="gross_weight">Gross Weight</string>
+    <string name="dimension_weight">Dimension Weight</string>
+    <string name="length">Length</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+    <string name="actual_weight">Actual Weight</string>
+    <string name="pieces">Pieces</string>
+    <string name="declare_value">Declare Value</string>
+    <string name="service_alert">Service Alert</string>
+    <string name="charges">Charges</string>
+    <string name="item_amount">Online Sale Amount</string>
+    <string name="service_amount">Service Amount</string>
+    <string name="commercial_tax">Commercial Tax</string>
+    <string name="discount">Discount</string>
+    <string name="remote_area_charges">Remote Charges</string>
+    <string name="total">Total</string>
+    <string name="exchange_rate">Exchange Rate</string>
+    <string name="calculate">Calculate</string>
+    <string name="username">User Name</string>
+    <string name="photo">Photo</string>
+    <string name="aboutconsignee">About Consignee</string>
+    <string name="aboutshipper">About Shipper</string>
+    <string name="aboutamount">About Amount</string>
+    <string name="aboutweight">About Weight</string>
+    <string name="aboutgeneralinfo">About General Information</string>
+    <string name="value">0.00</string>
+    <string name="intvalue">0</string>
+    <string name="checkwaybill">Check your waybills</string>
+    <string name="waybill">Waybills</string>
+    <string name="checkpickups">Check your pickups</string>
+    <string name="pickups">Pickups</string>
+    <string name="percentage">%</string>
+    <string name="accept">Accept</string>
+    <string name="download">Download</string>
+    <string name="from">FROM:</string>
+    <string name="to">TO:</string>
+    <string name="nostring">-</string>
+    <string name="pressagain">Please Press Again To Exist</string>
+    <string name="othercharges">Other Charges</string>
+    <string name="chooseratecard">RateCard</string>
+    <string name="receiver">Receiver Name</string>
+    <string name="dollor">dollor</string>
+    <string name="mmk"> MMK</string>
+    <string name="no_barcode_captured">No barcode captured</string>
+    <string name="barcode_error_format">"Error reading barcode: %1$s"</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="ok">OK</string>
+    <string name="send">Send</string>
+    <string name="scanedlist">Scaned way bill list</string>
+    <string name="success">Success Way bill list</string>
+    <string name="unsuccess">Unsuccess Way bill list</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="sr">Sr</string>
+    <string name="dispatch_order_number">Dispatch Order Number</string>
+    <string name="waybill_code">Waybill Code</string>
+    <string name="additionalAmt">Additional Amount</string>
+    <string name="receivedamt">Received Amount</string>
+    <string name="create">Create Waybill</string>
+    <string name="checkpickuplist">Check pickup list</string>
+
+    <!--<string-array name="customer_type">
+        <item>Customer Type</item>
+        <item>Express</item>
+        <item>E-Com</item>
+        <item>Logistic</item>
+        <item>Temporary</item>
+        <item>BCS</item>
+        <item>Credit</item>
+    </string-array>-->
+
+    <string-array name="doc_type">
+        <item>Document Type</item>
+        <item>Document</item>
+        <item>Parcel</item>
+    </string-array>
+    <string-array name="rate_card">
+        <item>Express</item>
+        <item>Bago Industrial</item>
+        <item>FOC</item>
+        <item>Forwarding</item>
+        <item>Return</item>
+        <item>Shop.com.mm</item>
+        <item>E-Com</item>
+    </string-array>
+
+    <string-array name="dom_type">
+        <item>DOM Type</item>
+        <item>Domestic</item>
+        <item>International</item>
+    </string-array>
+
+    <string-array name="currency_type">
+        <item>MMK</item>
+        <item>USD</item>
+    </string-array>
+    <string name="twopercentdisc">2 % Discount User</string>
+
+    <!--<string-array name="payment_type">
+        <item>Payment Type</item>
+        <item>FIC</item>
+        <item>TC</item>
+        <item>Credit</item>
+        <item>Cash</item>
+        <item>E-Com</item>
+        <item>Express</item>
+        <item>Return</item>
+        <item>TC/Cash</item>
+    </string-array>-->
+</resources>

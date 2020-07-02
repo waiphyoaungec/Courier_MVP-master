@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/gray">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edtWayBillCode3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:inputType="text"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:hint="Search with BarCode"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/imgbtnScan3"/>
+
+                <ImageButton
+                    android:id="@+id/imgbtnScan3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@id/edtWayBillCode3"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_barcode"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/relativeWaybill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:background="@drawable/linearbackground">
+
+            <TextView
+                android:id="@+id/txtDesWaySource"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="@string/source"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtWayBillSource"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtDesWaySource"
+                android:padding="3dp"
+                android:text="@string/nostring" />
+
+            <TextView
+                android:id="@+id/txtWayBillDes"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtWayBillSource"
+                android:padding="3dp"
+                android:text="@string/destination"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtWayBillDestination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtWayBillDes"
+                android:padding="3dp"
+                android:text="@string/nostring" />
+
+            <TextView
+                android:id="@+id/txtDesShipper"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtDesWaySource"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="@string/shippername"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtShipper"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtWayBillSource"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtDesShipper"
+                android:padding="3dp"
+                android:text="@string/nostring" />
+
+            <TextView
+                android:id="@+id/txtDesCosignee"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtWayBillDes"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtShipper"
+                android:padding="3dp"
+                android:text="@string/consigneename"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtCosignee"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtWayBillDestination"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtDesCosignee"
+                android:padding="3dp"
+                android:text="@string/nostring" />
+
+            <TextView
+                android:id="@+id/txtDesCode"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDesShipper"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="@string/code"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtCode"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtShipper"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtDesCode"
+                android:padding="3dp"
+                android:text="@string/nostring" />
+
+            <TextView
+                android:id="@+id/txtDesDoc"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDesCosignee"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtCode"
+                android:padding="3dp"
+                android:text="@string/doc_type"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtDocType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCosignee"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtDesDoc"
+                android:padding="3dp"
+                android:text="@string/nostring" />
+
+            <TextView
+                android:id="@+id/txtDesCusType"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDesCode"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:text="@string/customer_type"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtCustomerTye"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDesCode"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtDesCusType"
+                android:padding="3dp"
+                android:text="@string/nostring" />
+
+            <TextView
+                android:id="@+id/txtDesPayment"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDesDoc"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtCustomerTye"
+                android:padding="3dp"
+                android:text="@string/payment_type"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/txtPaymentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDocType"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@id/txtDesPayment"
+                android:padding="3dp"
+                android:text="@string/nostring" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+            <Button
+                android:id="@+id/btnDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/delivery"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:background="@drawable/btn_background"/>
+            <Button
+                android:id="@+id/btnAddCheckPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/addcheckpoint"
+                android:textAllCaps="false"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_background"/>
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/loading_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/relativeTracking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:background="@drawable/linearbackground">
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+                <TextView
+                    android:id="@+id/txtCheckPoints"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deliverycheckpoint"
+                    android:padding="5dp"
+                    android:layout_alignParentStart="true"/>
+                <Spinner
+                    android:id="@+id/spnCheckPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/doc_type"
+                    android:layout_toEndOf="@id/txtCheckPoints"
+                    tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative1">
+                <TextView
+                    android:id="@+id/txtCheckRemark"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remark"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"/>
+                <EditText
+                    android:id="@+id/edtCheckRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txtCheckRemark"
+                    android:inputType="" />
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_background"
+                android:text="Add"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/relative2"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativeDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/linearbackground">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="5dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtReceiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/receiver"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:text="Save"
+                android:background="@drawable/btn_background"
+                android:layout_below="@id/textinput"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

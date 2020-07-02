@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainConstraintLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffee58">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="567dp"
+        android:id="@+id/v_guideline1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1015625"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="39dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="567dp"
+        android:id="@+id/v_guideline2"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="349dp"
+        app:layout_constraintGuide_percent="0.9088542"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:id="@+id/h_guideline1"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="61dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.107583776"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/h_guideline2"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="174dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.3068783"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/h_guideline3"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="228dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.4021164"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/fbCoverImageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/h_guideline2"
+        android:scaleType="centerCrop"
+        android:src="@drawable/courier_man"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fbLogoImageView"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/h_guideline3"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/autoTxtPhone"
+        android:imeOptions="actionNext"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        android:hint="username"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/h_guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:textColorLink="@android:color/white"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/edtPassword"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/autoTxtPhone"
+        android:layout_marginTop="4dp"
+        android:hint="Password"/>
+
+    <!--<TextView-->
+        <!--android:text="@string/welcome"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/langTextView"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/v_guideline2"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:textColor="#4867a0"-->
+        <!--app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/h_guideline2"-->
+        <!--android:textSize="20dp"/>-->
+
+
+    <Button
+        android:text="Log In"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="@color/cardview_light_background"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        android:layout_marginTop="10dp"
+        android:enabled="true"/>
+
+    <!--<Button-->
+        <!--android:text="Create New Facebook Account"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/newAccountButton"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/v_guideline2"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:layout_marginBottom="16dp"/>-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="90dp"
+        tools:layout_editor_absoluteX="164dp"
+        android:id="@+id/fbLogoStaticImageView"
+        app:layout_constraintLeft_toRightOf="@+id/v_guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/h_guideline1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

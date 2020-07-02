@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <app.dinus.com.loadingdrawable.LoadingView
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:loading_renderer="GearLoadingRenderer" />
+
+        <LinearLayout
+            android:id="@+id/linearWaybillDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/linearbackground">
+
+                <TextView
+                    android:id="@+id/txtDesWaySource"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/source"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtWayBillSource"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesWaySource"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtWayBillDes"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtWayBillSource"
+                    android:padding="3dp"
+                    android:text="@string/destination"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtWayBillDestination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtWayBillDes"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesRemoteSrc"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txtDesWaySource"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/remotesource"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtRemoteSource"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txtWayBillSource"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesRemoteSrc"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesRemoteDes"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txtWayBillDes"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtRemoteSource"
+                    android:padding="3dp"
+                    android:text="@string/remotedestination"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtRemoteDestination"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/txtWayBillDestination"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesRemoteDes"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesCode"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesRemoteSrc"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/code"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtCode"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtRemoteSource"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesCode"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesDoc"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesRemoteDes"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtCode"
+                    android:padding="3dp"
+                    android:text="@string/doc_type"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtDocType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtRemoteDestination"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesDoc"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesCusType"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesCode"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/customer_type"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtCustomerTye"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesCode"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesCusType"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesPayment"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesDoc"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtCustomerTye"
+                    android:padding="3dp"
+                    android:text="@string/payment_type"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtPaymentType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDocType"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesPayment"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+            </RelativeLayout>
+
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtDesRealDate"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/realdate"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtRealDate"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txtDesRealDate" />
+
+                <TextView
+                    android:id="@+id/txtDesRealTime"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txtRealDate"
+                    android:text="@string/realtime"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtRealtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txtDesRealTime" />
+            </RelativeLayout>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/aboutshipper"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/linearbackground">
+
+                <TextView
+                    android:id="@+id/txtDesShipperCode"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/shippercode"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtShipperCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesShipperCode"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesShipperName"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesShipperCode"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/shippername"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtShipperName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtShipperCode"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesShipperName"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesCompanyName"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDesShipperName"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/companyname"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtCompanyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtShipperName"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesCompanyName"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesContactName"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesCompanyName"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/contactname"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtContactName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCompanyName"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesContactName"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesAddress"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesContactName"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/address"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtContactName"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesAddress"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesPhone"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesAddress"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/phone"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtAddress"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesPhone"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/aboutconsignee"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/linearbackground">
+
+                <TextView
+                    android:id="@+id/txtDesConsigneeCode"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/code"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtConsigneeCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesConsigneeCode"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesConsigneeName"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesConsigneeCode"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/consigneename"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtConsigneeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtConsigneeCode"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesConsigneeName"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesConsigneeComapany"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesConsigneeName"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/companyname"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtConsigneeCompanyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtConsigneeName"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesConsigneeComapany"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesConsigneeContact"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesConsigneeComapany"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/contactname"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtConsigneeContactName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtConsigneeCompanyName"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesConsigneeContact"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesConsigneeAdd"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesConsigneeContact"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/address"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtConsigneeAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtConsigneeContactName"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesConsigneeAdd"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesConsigneePhone"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesConsigneeAdd"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/phone"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtConsigneePhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtConsigneeAddress"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesConsigneePhone"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesRemark"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesConsigneePhone"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/remark"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/txtRemark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtConsigneePhone"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesRemark"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/aboutweight"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/linearbackground">
+
+                <LinearLayout
+                    android:id="@+id/linearWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="3dp"
+                    android:orientation="horizontal"
+                    android:padding="3dp"
+                    android:weightSum="6">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/length" />
+
+                    <TextView
+                        android:id="@+id/txtLength"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/width" />
+
+                    <TextView
+                        android:id="@+id/txtWidth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/height" />
+
+                    <TextView
+                        android:id="@+id/txtHeight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtDesGross"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearWeight"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/gross_weight" />
+
+                <TextView
+                    android:id="@+id/txtGrossWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearWeight"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesGross"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesPieces"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesGross"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/pieces" />
+
+                <TextView
+                    android:id="@+id/txtPieces"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesGross"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesPieces"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <!--<TextView
+                    android:id="@+id/txtDesDeclareValues"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesPieces"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/declare_value" />
+
+                <TextView
+                    android:id="@+id/txtDeclareValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesPieces"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesDeclareValues"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />-->
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/aboutamount"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/linearbackground">
+
+                <TextView
+                    android:id="@+id/txtDesCharges"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/charges" />
+
+                <TextView
+                    android:id="@+id/txtCharges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesCharges"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesAreaCharges"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCharges"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/remote_area_charges" />
+
+                <TextView
+                    android:id="@+id/txtRemoteCharges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCharges"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesAreaCharges"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesCommercialTax"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesAreaCharges"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/commercial_tax" />
+
+                <TextView
+                    android:id="@+id/txtCommericalTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtRemoteCharges"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesCommercialTax"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+
+                <TextView
+                    android:id="@+id/txtDesDiscount"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:layout_below="@id/txtDesCommercialTax"
+                    android:text="@string/discount" />
+
+                <TextView
+                    android:id="@+id/txtDiscountAmount"
+                    android:layout_width="wrap_content"
+                    android:text="@string/nostring"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_below="@id/txtCommericalTax"
+                    android:layout_toEndOf="@id/txtDesTotal"
+                    android:padding="3dp" />
+
+                <TextView
+                    android:id="@+id/txtDesTotal"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDesDiscount"
+                    android:layout_margin="3dp"
+                    android:padding="3dp"
+                    android:text="@string/total" />
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDiscountAmount"
+                    android:layout_margin="3dp"
+                    android:layout_toEndOf="@id/txtDesTotal"
+                    android:padding="3dp"
+                    android:text="@string/nostring" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
