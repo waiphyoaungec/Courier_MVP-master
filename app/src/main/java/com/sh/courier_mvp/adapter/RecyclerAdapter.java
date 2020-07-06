@@ -71,7 +71,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
     }
 
     @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
+    }
+
+    @Override
     public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, final int position) {
+
+
         if (holder instanceof PickuplistHolder) {
             ((PickuplistHolder) holder).txtCodeNo.setText(data.get(position).getCode());
             ((PickuplistHolder) holder).txtSr.setText((position+1)+".");
@@ -103,12 +110,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
                     }
                 });
             } else if (SHOWTYPE == AppData.PICKUP_VIEW) {
+                ((PickuplistHolder) holder).btnAccept.setVisibility(View.VISIBLE);
                 if (data.get(position).getOperation_accepted_by() == null) {
+
+
                     ((PickuplistHolder) holder).btnAccept.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             mainPresenter.acceptPickUp(AppData.GetToken(context.getApplicationContext()), data.get(position).getTranId());
-                            ((PickuplistHolder) holder).btnAccept.setVisibility(View.GONE);
+                            ((PickuplistHolder) holder).btnAccept.setVisibility(View.VISIBLE);
                         }
                     });
                 } else {
@@ -144,15 +154,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
                     }
                 });
             }
+            ((PickuplistHolder) holder).checkBox.setOnCheckedChangeListener(null);
+            ((PickuplistHolder) holder).checkBox.setChecked(data.get(position).getChecked());
 
 
             ((PickuplistHolder) holder).checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                  //  Toast.makeText(context,"it is" + position,Toast.LENGTH_SHORT).show();
                     if (isChecked) {
+                        data.get(position).setChecked(true);
                         printeddata.add(data.get(position));
                         communication.respond(printeddata);
                     } else {
+                        data.get(position).setChecked(false);
                         if (printeddata != null) {
                             printeddata.remove(data.get(position));
                             communication.respond(printeddata);

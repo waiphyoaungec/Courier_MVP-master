@@ -236,11 +236,11 @@ SwipeRefreshLayout.OnRefreshListener{
 
     @Override
     public void showMessage(String message) {
-        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.content, new HomeFragment());
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-        ft.commit();
-        Toast.makeText(getActivity(), message +"here", Toast.LENGTH_LONG).show();
+//        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+//        ft.replace(R.id.content, new HomeFragment());
+//        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+//        ft.commit();
+        Toast.makeText(getActivity(), message + "", Toast.LENGTH_LONG).show();
     }
 
     @Override

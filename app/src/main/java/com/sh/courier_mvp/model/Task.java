@@ -103,6 +103,8 @@ public class Task {
     @Expose
     private String payment_type;
 
+    private boolean checked;
+
     public String getId() {
         return id;
     }
@@ -357,5 +359,13 @@ public class Task {
 
     public void setTotal_amt(String total_amt) {
         this.total_amt = total_amt;
+    }
+
+    public boolean getChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
     }
 }
