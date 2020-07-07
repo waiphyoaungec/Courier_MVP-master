@@ -496,7 +496,7 @@ public class Presenter implements MainContract.MainPresenter{
                 pickUpListView.hideProgress();
                 if(response.isSuccessful()) {
                     getPickupNotiCount(token);
-                    pickUpListView.showMessage(response.body() != null ? response.body().get("message") + "here" : "null");
+                    pickUpListView.showMessage(response.body() != null ? response.body().get("message") + "pickup" : "null");
                 }
                 else{
 

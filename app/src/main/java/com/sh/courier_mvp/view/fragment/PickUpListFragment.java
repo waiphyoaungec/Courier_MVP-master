@@ -68,6 +68,7 @@ SwipeRefreshLayout.OnRefreshListener{
     @BindView(R.id.swp_pickup)
     SwipeRefreshLayout swipeRefreshLayout;
     public static final String FONT = "res/raw/zg.TTF";
+    private  RecyclerAdapter adapter;
     //String token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vb21zLm1nbGV4cHJlc3MuY29tLm1tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNTgwODc0NTI2LCJuYmYiOjE1ODA4NzQ1MjYsImp0aSI6IlNYcTFNUWJIWjF3MWxvMGoiLCJzdWIiOjM5LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.4NE-NqaYYY5Bq4_hUu5uBBZmCrZqnkj30PLOci2kPbY";
 
     @Nullable
@@ -228,7 +229,7 @@ SwipeRefreshLayout.OnRefreshListener{
         Log.d("test", "showPickUpList: " + data);
         this.data = data;
 
-        RecyclerAdapter adapter = new RecyclerAdapter(data, getActivity(), AppData.PICKUP_VIEW, communication, mainPresenter);
+        adapter = new RecyclerAdapter(data, getActivity(), AppData.PICKUP_VIEW, communication, mainPresenter);
         recycler_view.setLayoutManager(new LinearLayoutManager(getActivity(),
                 LinearLayoutManager.VERTICAL, false));
         recycler_view.setAdapter(adapter);
@@ -240,6 +241,7 @@ SwipeRefreshLayout.OnRefreshListener{
 //        ft.replace(R.id.content, new HomeFragment());
 //        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 //        ft.commit();
+       onRefresh();
         Toast.makeText(getActivity(), message + "", Toast.LENGTH_LONG).show();
     }
 

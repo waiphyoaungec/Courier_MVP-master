@@ -118,7 +118,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
                         @Override
                         public void onClick(View v) {
                             mainPresenter.acceptPickUp(AppData.GetToken(context.getApplicationContext()), data.get(position).getTranId());
-                            ((PickuplistHolder) holder).btnAccept.setVisibility(View.VISIBLE);
+                            ((PickuplistHolder) holder).btnAccept.setVisibility(View.GONE);
                         }
                     });
                 } else {
