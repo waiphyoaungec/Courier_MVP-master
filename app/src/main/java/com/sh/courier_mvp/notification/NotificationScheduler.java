@@ -9,6 +9,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.AudioAttributes;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
@@ -113,6 +114,11 @@ public class NotificationScheduler {
             NotificationChannel channel = new NotificationChannel(channelId, channelname , NotificationManager.IMPORTANCE_HIGH);
             channel.enableVibration(true);
             channel.setLockscreenVisibility(NotificationCompat.PRIORITY_HIGH);
+            AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .setUsage(AudioAttributes.USAGE_NOTIFICATION)
+                    .build();
+            channel.setSound(alarmSound, audioAttributes);
             channel.setVibrationPattern(new long[]{ 2000 });
             notificationManager.createNotificationChannel(channel);
         }

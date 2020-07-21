@@ -6,43 +6,38 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.StrictMode;
-import androidx.annotation.NonNull;
-
-import com.downloadapk.util.DownloadController;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.core.content.ContextCompat;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.downloadapk.util.DownloadController;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.sh.courier_mvp.R;
-import com.sh.courier_mvp.model.reporterror.ErrorModel;
-import com.sh.courier_mvp.util.Utility;
 import com.sh.courier_mvp.data.AppData;
 import com.sh.courier_mvp.presenter.MainContract;
 import com.sh.courier_mvp.presenter.Presenter;
 import com.sh.courier_mvp.util.ConnectivityReceiver;
+import com.sh.courier_mvp.util.Utility;
 import com.sh.courier_mvp.view.fragment.CheckPickupListFragment;
-import com.sh.courier_mvp.view.fragment.CreatePickupFragment;
 import com.sh.courier_mvp.view.fragment.CreateWaybillFragmenet;
 import com.sh.courier_mvp.view.fragment.HomeFragment;
 import com.sh.courier_mvp.view.fragment.PickUpListFragment;
@@ -69,8 +64,9 @@ public class MainActivity extends AppCompatActivity
     String TAG = "MainActivity";
     private int count = 0;
     private String notiCount = "0";
+
     Timer timer;
-    private final String versions = "11";
+    private final String versions = "14";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -320,9 +316,8 @@ public class MainActivity extends AppCompatActivity
                                 alertDialog.show();
                             }
                             else{
-                                Toast.makeText(MainActivity.this,"Your app is already updated",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
                             }
-
                         }
                     }
                 });
