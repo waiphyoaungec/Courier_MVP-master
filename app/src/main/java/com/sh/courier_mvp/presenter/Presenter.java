@@ -516,9 +516,9 @@ public class Presenter implements MainContract.MainPresenter{
     }
 
     @Override
-    public void devilery(String token, String receiver, String id) {
+    public void devilery(String token,String user_id, String receiver, String id) {
         trackingPointView.showProgress();
-        mglApi.delivery(token, receiver, id).enqueue(new Callback<Map<String, String>>() {
+        mglApi.delivery(token,user_id, receiver, id).enqueue(new Callback<Map<String, String>>() {
             @Override
             public void onResponse(@NonNull Call<Map<String, String>> call, @NonNull Response<Map<String, String>> response) {
                 trackingPointView.hideProgress();
@@ -687,9 +687,9 @@ public class Presenter implements MainContract.MainPresenter{
     }
 
     @Override
-    public void changeCheckPoint(String token, String id, String checkpoint_id, String remark) {
+    public void changeCheckPoint(String token,String user_id, String id, String checkpoint_id, String remark) {
         trackingPointView.showProgress();
-        mglApi.waybilltracking(token, id, checkpoint_id, remark).enqueue(new Callback<Map<String, String>>() {
+        mglApi.waybilltracking(token,user_id, id, checkpoint_id, remark).enqueue(new Callback<Map<String, String>>() {
             @Override
             public void onResponse(Call<Map<String, String>> call, Response<Map<String, String>> response) {
                 Log.w(TAG, "getCheckPoints "+new Gson().toJson(response));
@@ -716,9 +716,9 @@ public class Presenter implements MainContract.MainPresenter{
 
 
     @Override
-    public void deliveryroutefix(String token, ArrayList<String> waybillcode) {
+    public void deliveryroutefix(String token,String user_id, ArrayList<String> waybillcode) {
         deliveryWBView.showProgress();
-        mglApi.deliveryroutefix(token, waybillcode).enqueue(new Callback<Delivery>() {
+        mglApi.deliveryroutefix(token,user_id, waybillcode).enqueue(new Callback<Delivery>() {
             @Override
             public void onResponse(Call<Delivery> call, Response<Delivery> response) {
                 if(response.isSuccessful()) {

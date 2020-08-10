@@ -212,7 +212,8 @@ public class WayBillListFragment extends Fragment implements MainContract.Delive
                 else{
                     Log.i(TAG, new Gson().toJson(waybilllist));
                     hideKeyboard(getActivity());
-                    mainPresenter.deliveryroutefix(AppData.GetToken(Objects.requireNonNull(getContext())),waybilllist);
+                    mainPresenter.deliveryroutefix(AppData.GetToken(Objects.requireNonNull(getContext())),
+                            "" + AppData.getUserId(getActivity().getApplicationContext()),waybilllist);
                 }
 
             }

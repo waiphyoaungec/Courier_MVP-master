@@ -11,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity
     private String notiCount = "0";
 
     Timer timer;
-    private final String versions = "14";
+    private final String versions = "15";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

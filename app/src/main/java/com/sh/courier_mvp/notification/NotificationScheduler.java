@@ -13,8 +13,10 @@ import android.media.AudioAttributes;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
+
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.TaskStackBuilder;
+
 import android.util.Log;
 
 import com.sh.courier_mvp.R;
@@ -25,11 +27,11 @@ import static android.content.Context.ALARM_SERVICE;
 
 public class NotificationScheduler {
 
-    public static final int DAILY_REMINDER_REQUEST_CODE=100;
-    public static final String TAG="NotificationScheduler";
+    public static final int DAILY_REMINDER_REQUEST_CODE = 100;
+    public static final String TAG = "NotificationScheduler";
     public static NotificationManager notificationManager;
-    public static void setReminder(Context context, Class<?> cls, int hour, int min)
-    {
+
+    public static void setReminder(Context context, Class<?> cls, int hour, int min) {
         Calendar calendar = Calendar.getInstance();
 
         Calendar setcalendar = Calendar.getInstance();
@@ -40,10 +42,10 @@ public class NotificationScheduler {
         Log.d("set_define", setcalendar.getTime().toString());
         Log.d("set_current", calendar.getTime().toString());
         // cancel already scheduled reminders
-        cancelReminder(context,cls);
+        cancelReminder(context, cls);
 
-        if(setcalendar.before(calendar))
-            setcalendar.add(Calendar.DAY_OF_MONTH,0);
+        if (setcalendar.before(calendar))
+            setcalendar.add(Calendar.DAY_OF_MONTH, 0);
 
         Log.d("set_after", setcalendar.getTime().toString());
         // Enable a receiver
@@ -73,8 +75,7 @@ public class NotificationScheduler {
 
     }
 
-    public static void cancelReminder(Context context, Class<?> cls)
-    {
+    public static void cancelReminder(Context context, Class<?> cls) {
         // Disable a receiver
 
         ComponentName receiver = new ComponentName(context, cls);
@@ -91,8 +92,7 @@ public class NotificationScheduler {
         pendingIntent.cancel();
     }
 
-    public static void showNotification(Context context, Class<?> cls, String title, String content)
-    {
+    public static void showNotification(Context context, Class<?> cls, String title, String content) {
         Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
         Intent notificationIntent = new Intent(context, cls);
@@ -111,7 +111,7 @@ public class NotificationScheduler {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context.getApplicationContext(), channelId);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(channelId, channelname , NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel channel = new NotificationChannel(channelId, channelname, NotificationManager.IMPORTANCE_HIGH);
             channel.enableVibration(true);
             channel.setLockscreenVisibility(NotificationCompat.PRIORITY_HIGH);
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
@@ -119,7 +119,7 @@ public class NotificationScheduler {
                     .setUsage(AudioAttributes.USAGE_NOTIFICATION)
                     .build();
             channel.setSound(alarmSound, audioAttributes);
-            channel.setVibrationPattern(new long[]{ 2000 });
+            channel.setVibrationPattern(new long[]{2000});
             notificationManager.createNotificationChannel(channel);
         }
         Notification notification = builder.setContentTitle(title)
@@ -134,7 +134,8 @@ public class NotificationScheduler {
         notification.flags = Notification.FLAG_AUTO_CANCEL;
         notificationManager.notify(DAILY_REMINDER_REQUEST_CODE, notification);
     }
-    public static void cancelNotification(){
+
+    public static void cancelNotification() {
         notificationManager.cancel(0);
     }
 }

@@ -76,7 +76,11 @@ public class WayBillListByPickUpActivity extends AppCompatActivity implements Ma
         //Log.i(TAG, data.getData().size()+" showWayBillList");
         if(data == null){
             Toast.makeText(this, "No Data", Toast.LENGTH_LONG).show();
-        }else {
+        }
+        else if(data.getData().size() == 0){
+            Toast.makeText(this,"No Waybill created for this Pickup",Toast.LENGTH_SHORT).show();
+        }
+        else {
             RecyclerAdapter adapter = new RecyclerAdapter(data, this, AppData.WAYBILL_VIEW, communication, mainPresenter);
             recycler_view.setLayoutManager(new LinearLayoutManager(this,
                     LinearLayoutManager.VERTICAL,false));

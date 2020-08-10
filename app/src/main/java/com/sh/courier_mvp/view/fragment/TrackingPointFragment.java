@@ -134,7 +134,8 @@ public class TrackingPointFragment extends Fragment implements MainContract.Trac
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mainPresenter.changeCheckPoint(AppData.GetToken(getActivity().getApplicationContext()),waybill_id, check_id, edtCheckRemark.getText().toString());
+                mainPresenter.changeCheckPoint(AppData.GetToken(getActivity().getApplicationContext()),""+
+                        AppData.getUserId(getActivity().getApplicationContext()),waybill_id, check_id, edtCheckRemark.getText().toString());
             }
         });
         btnDelivery.setOnClickListener(new View.OnClickListener() {
@@ -147,7 +148,8 @@ public class TrackingPointFragment extends Fragment implements MainContract.Trac
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mainPresenter.devilery(AppData.GetToken(getActivity().getApplicationContext()), edtReceiver.getText().toString(), waybill_id);
+                mainPresenter.devilery(AppData.GetToken(getActivity().getApplicationContext()),""+
+                        AppData.getUserId(getActivity().getApplicationContext()), edtReceiver.getText().toString(), waybill_id);
             }
         });
         spnCheckPoints.setOnItemSelectedListener(this);

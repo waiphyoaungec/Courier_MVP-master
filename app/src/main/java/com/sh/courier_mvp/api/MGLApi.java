@@ -49,6 +49,7 @@ public interface MGLApi {
     @POST("waybilltracking")
     Call<Map<String,String>> waybilltracking(@Field("token") String token,
                            @Field("id") String id,
+                           @Field("user_id") String user_id,
                            @Field("checkpoint_id") String checkpoint_id,
                            @Field("remark") String remark);
 
@@ -59,7 +60,9 @@ public interface MGLApi {
     @FormUrlEncoded
     @POST("deliveryroutefix")
     Call<Delivery> deliveryroutefix(
-            @Field("token") String token, @Field("id[]") ArrayList<String> id);
+            @Field("token") String token,
+            @Field("user_id") String user_id,
+            @Field("id[]") ArrayList<String> id);
 
     @GET("accept_pickup")
     Call<Map<String,String>> accept_pickup(@Query("token") String token,
@@ -101,6 +104,7 @@ public interface MGLApi {
     @POST("deliverywaybill")
     @FormUrlEncoded
     Call<Map<String,String>> delivery(@Field("token") String token,
+                                             @Field("user_id") String user_id,
                                              @Field("receiver_name") String receiver_name,
                                              @Field("waybill_id") String waybill_id);
 

@@ -152,7 +152,7 @@ public interface MainContract {
 
         void acceptPickUp(String token, String id);
 
-        void devilery(String token, String receiver, String id);
+        void devilery(String token,String user_id, String receiver, String id);
 
         void acceptWayBill(String token, String id);
 
@@ -164,9 +164,9 @@ public interface MainContract {
 
         void getCheckPoints(String token);
 
-        void changeCheckPoint(String token, String id, String checkpoint_id, String remark);
+        void changeCheckPoint(String token, String user_id,String id, String checkpoint_id, String remark);
 
-        void deliveryroutefix(String token, ArrayList<String> waybillcode);
+        void deliveryroutefix(String token,String user_id ,ArrayList<String> waybillcode);
 
         void getRateCard(String token, String loc_from, String loc_to, String gw, String actual_weight, String cus_type, String payment_type, String cur_id, String shipper_code, String ratecard_id);
 
