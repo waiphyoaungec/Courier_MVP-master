@@ -342,7 +342,8 @@ public class CreateWaybillFragmenet extends Fragment implements MainContract.Add
 
                     ratecard = new ArrayList<>();
                     ratecard.add("Choose Rate Card");
-                    if(str_ratecard.length()<2)
+                    ratecard_id = shipperList.get(position).getRateCardHdrIds();
+                    if(str_ratecard.length()<2) //if rate card name is null or empty
                         ratecard.add("Express");
                     else
                         ratecard.add(str_ratecard);
@@ -1223,7 +1224,6 @@ public class CreateWaybillFragmenet extends Fragment implements MainContract.Add
                     for(int i=0;i< getResources().getStringArray(R.array.rate_card).length;i++){
                         if(ratecard.get(1).equals(getResources().getStringArray(R.array.rate_card)[i])){
                             Log.d("ratecard","  " + i);
-                            ratecard_id = ""+(i+1);
                             break;
 
 
