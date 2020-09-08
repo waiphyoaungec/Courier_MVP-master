@@ -677,7 +677,7 @@ public class CreateWaybillFragmenet extends Fragment implements MainContract.Add
             mainPresenter.addWayBill(AppData.GetToken(getContext()), location_from, location_to, remote_from, remote_to, edtWayBillCode.getText().toString(), customer_type, doc_type, "", 0.0, shipper_code,
                     edtShipperName.getText().toString(), edtCompanyName.getText().toString(), edtContactName.getText().toString(), edtAddress.getText().toString(), edtPhone.getText().toString(), edtEmail.getText().toString(),
                     edtConsignee.getText().toString(), edtConsigneeCompanyName.getText().toString(), edtConsigneeContactName.getText().toString(), edtConsigneeAddr.getText().toString(), edtConsigneePhone.getText().toString(),
-                    edtEmail.getText().toString(), remark.getText().toString() + "", payment_type, 0, 0, gross_weight, length, width, height, actual_weight, pieces, cur_id, cur_rate, item_amt,
+                    edtEmail.getText().toString(), remark.getText().toString() + "", payment_type, 0, 13, gross_weight, length, width, height, actual_weight, pieces, cur_id, cur_rate, item_amt,
                     service_amt, charges, commercial_tax, dis_percent, dis_amt, area_charges,online_charges , additional_amt,
                     received_amt, cur_id, total_amt, "", "", img, "NEW", 0, ratecard_id, pickupTime,two_percent);
         }

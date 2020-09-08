@@ -5,14 +5,7 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
 android {
-    signingConfigs {
-        debug {
-            storeFile file('C:\\Users\\Lenovo\\Downloads\\debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-        }
-    }
+
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.sh.courier_mvp"

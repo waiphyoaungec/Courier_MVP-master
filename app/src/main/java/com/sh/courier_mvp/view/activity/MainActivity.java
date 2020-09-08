@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity
     private String notiCount = "0";
 
     Timer timer;
-    private final String versions = "17";
+    private final String versions = "20";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
